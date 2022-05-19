@@ -31,7 +31,7 @@ export const RATE_US_FORCE = true;
 export const ENABLE_INTRO_SLIDER = true;
 export const ENABLE_OFFERS_FILTRE = true;
 
-export const OFFERS_NUMBER_PER_ROW;
+export const OFFERS_NUMBER_PER_ROW = 0;
 
 export const ENABLE_PEOPLE_AROUND_ME = false;
 

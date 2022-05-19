@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import DenseAppBar from './components/DenseAppBar';
@@ -25,18 +25,17 @@ function App() {
             <img src="https://achesuarota.com.br/application/modules/user/views/assets/images/custom_bg.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
           </div>
           {
-            Object.values(posts).map(value => {
+            Object.values(posts).map((post, p) => {
               return (
-                <div>
-                  <p><strong>Nome:</strong> {value.name}</p>
-                  <p><strong>Website:</strong> {value.website}</p>
-                  <p><strong>Endereço:</strong> {value.address}</p>
-                  <p><strong>Telefone:</strong> {value.telephone}</p>
+                <div key={p}>
+                  <p><strong>Nome:</strong> {post.name}</p>
+                  <p><strong>Website:</strong> {post.website}</p>
+                  <p><strong>Endereço:</strong> {post.address}</p>
+                  <p><strong>Telefone:</strong> {post.telephone}</p>
                   <h4>Foto</h4>
-
                   {
-                    Object.values(value.images).map(image =>
-                      <img src={image.full.url} />
+                    Object.values(post.images).map((image, i) =>
+                      <img key={i} src={image.full.url} />
                     )
                   }
                 </div>

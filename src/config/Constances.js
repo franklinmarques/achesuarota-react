@@ -109,7 +109,7 @@ export const API_PAYMENT_LINK_CALL = BASE_URL + "/booking_payment/link_call";
 
 // WARNING :  DO NOT EDIT THIS
 export const ListCats = [];
-export const Numboftabs;
+export const Numboftabs = 0;
 
 //         public static class fonts {
 //         }
